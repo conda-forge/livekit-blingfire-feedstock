@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 1.1.0
+  version: "1.4.6"
 
 package:
   name: livekit-blingfire
@@ -20,7 +20,7 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
         - pybind11

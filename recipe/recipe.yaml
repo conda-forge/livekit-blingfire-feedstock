@@ -14,13 +14,13 @@ source:
   sha256: f63e8a96189786f3c4e8d4cfa618d6ccbb7e01e4b931e12da47b1a75de08228b
 
 build:
-  number: 0
+  number: 1
   script: ${{ PYTHON }} -m pip install livekit-plugins/livekit-blingfire -vv --no-deps --no-build-isolation
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
+      then:
         - python
         - cross-python_${{ target_platform }}
         - pybind11
